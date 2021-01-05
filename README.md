@@ -43,3 +43,10 @@ for a usage example
 ##### 0.0.1
 first release
 
+##### 0.0.2
+* add responseType and json handling
+* add requestType, json.stringify the request body if it is set
+* add timeoutSeconds and timeout handler function
+
+##### 0.0.3 - unreleased
+...
