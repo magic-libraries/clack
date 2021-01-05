@@ -41,6 +41,7 @@ export const http = (dispatch, props) => {
   xhr.ontimeout = () => handler(timeout)
 
   xhr.open(method, url)
+
   if (props.body) {
     xhr.send(requestType === 'json' ? lib.json.stringify(props.body, null, 2) : props.body)
   } else {
