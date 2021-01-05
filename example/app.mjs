@@ -6,10 +6,12 @@ export const state = {
   menu: [
     { to: '/#installation', text: 'installation' },
     {
-      to: '/#usage', text: 'usage', items: [
+      to: '/#usage',
+      text: 'usage',
+      items: [
         { to: '-plaintext', text: 'plaintext' },
         { to: '-json', text: 'json' },
-      ]
+      ],
     },
 
     { to: '/#source', text: 'source' },

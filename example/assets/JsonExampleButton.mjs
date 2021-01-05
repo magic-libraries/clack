@@ -33,11 +33,10 @@ export const actions = {
       requestingJson: true,
     }),
 
-    done: (state, xhr) =>
-      console.log({ xhr }) || {
-        ...state,
-        requestingJson: false,
-        responseJson: xhr.response,
-      },
+    done: (state, xhr) => ({
+      ...state,
+      requestingJson: false,
+      responseJson: xhr.response,
+    }),
   },
 }
