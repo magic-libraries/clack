@@ -5,12 +5,14 @@ export const View = state => [
 
   GitBadges('@magic-libraries/http'),
 
-  h3('installation'),
+  h3({ id: 'installation' }, 'installation'),
 
   Pre('npm install --save-exact magic-libraries/http'),
 
-  h3('usage'),
+  h3({ id: 'usage' }, 'usage'),
   p('in a page / component, just use the lib.http function as effect.'),
+
+  h4({ id: 'usage-plaintext' }, 'plaintext'),
 
   p([
     'see ',
@@ -30,6 +32,30 @@ export const View = state => ExampleButton({ ...state, url: 'https://jaeh.at')
   p('renders:'),
 
   ExampleButton({ ...state, url: 'https://jaeh.at' }),
+
+  h4({ id: 'usage-json' }, 'json'),
+
+  p([
+    'see ',
+    Link({
+      text: 'JsonExampleButton',
+      to: 'https://github.com/magic-libraries/http/tree/master/example/assets/JsonExampleButton',
+    }),
+    ' for a reference implementation',
+  ]),
+
+  p('use it in a page:'),
+
+  Pre(`
+export const View = state => JsonExampleButton({
+  ...state,
+  url: 'https://magic-libraries.github.io/http/hello.json',
+})
+  `),
+
+  p('renders:'),
+
+  JsonExampleButton({ ...state, url: '/http/hello.json' }),
 
   div([
     h3('source'),
