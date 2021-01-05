@@ -1,6 +1,7 @@
 export const View = ({ url, ...state }) => [
   p(state.requestingJson ? `Requesting ${url}` : 'Idle'),
-  state.responseJson && p([`Last Response from ${url}:`, Pre(lib.json.stringify(state.responseJson, null, 2))]),
+  state.responseJson &&
+    p([`Last Response from ${url}:`, Pre(lib.json.stringify(state.responseJson, null, 2))]),
 
   div(
     button(
@@ -32,10 +33,11 @@ export const actions = {
       requestingJson: true,
     }),
 
-    done: (state, xhr) => console.log({ xhr }) || ({
-      ...state,
-      requestingJson: false,
-      responseJson: xhr.response,
-    }),
+    done: (state, xhr) =>
+      console.log({ xhr }) || {
+        ...state,
+        requestingJson: false,
+        responseJson: xhr.response,
+      },
   },
 }
