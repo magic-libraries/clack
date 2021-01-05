@@ -37,11 +37,5 @@ export const actions = {
       requesting: false,
       status: xhr.status,
     }),
-
-    error: (state, xhr) => ({
-      ...state,
-      requesting: false,
-      status: xhr.status,
-    }),
   },
 }
