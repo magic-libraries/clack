@@ -18,7 +18,7 @@ export const View = state => [
     'see ',
     Link({
       text: 'ExampleButton',
-      to: 'https://github.com/magic-libraries/http/tree/master/example/assets/ExampleButton',
+      to: 'https://github.com/magic-libraries/http/blob/master/example/assets/ExampleButton.mjs',
     }),
     ' for a reference implementation',
   ]),
@@ -39,7 +39,7 @@ export const View = state => ExampleButton({ ...state, url: 'https://jaeh.at')
     'see ',
     Link({
       text: 'JsonExampleButton',
-      to: 'https://github.com/magic-libraries/http/tree/master/example/assets/JsonExampleButton',
+      to: 'https://github.com/magic-libraries/http/blob/master/example/assets/JsonExampleButton.mjs',
     }),
     ' for a reference implementation',
   ]),
@@ -58,7 +58,7 @@ export const View = state => JsonExampleButton({
   JsonExampleButton({ ...state, url: '/http/hello.json' }),
 
   div([
-    h3('source'),
+    h3({ id: 'source' }, 'source'),
 
     p([
       'the source for this page is in the ',
