@@ -67,7 +67,7 @@ export const View = state => JsonExampleButton({
         to: 'https://github.com/magic-libraries/http/tree/master/example',
       }),
       ' and gets built and published to github using ',
-      Link({ text: '@magic/core', to: 'https:/ / github.com / magic / core' }),
+      Link({ text: '@magic/core', to: 'https://github.com/magic/core/' }),
     ]),
   ]),
 ]
