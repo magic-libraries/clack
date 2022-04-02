@@ -48,5 +48,8 @@ first release
 * add requestType, json.stringify the request body if it is set
 * add timeoutSeconds and timeout handler function
 
-##### 0.0.3 - unreleased
+##### 0.0.3
+update dependencies
+
+##### 0.0.4 - unreleased
 ...
